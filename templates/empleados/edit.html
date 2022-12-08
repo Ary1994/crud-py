@@ -1,0 +1,26 @@
+{% for e in ari %}
+<form method="post" action="/modify" enctype="multipart/form-data">
+    <div class="card-body">
+        <h5 class="card-title">Formulario de actualizacion:</h5>
+        <p class="card-text">
+            <input type="text" name="idValue" value="{{e[0]}}" >
+            <div class="form-grup">
+                <label for="">Nombre</label>
+                <input type="text" name="nombreValue" id="nombreValue" value="{{ e[1] }}">
+            </div>
+            <div class="form-grup">
+                <label for="">Email</label>
+                <input type="text" name="emailValue" id="emailValue"value="{{ e[2] }}">
+            </div>
+            <div class="form-grup">
+                <label for="">Imagen</label>
+                {{e[3]}}
+                <input type="file" name="fileValue" id="fileValue" >
+            </div>
+           
+        </p>
+        
+    </div>
+    <button type="submit" class="btn btn-success">guardar cambios</button>
+</form>
+{% endfor %}

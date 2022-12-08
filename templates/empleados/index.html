@@ -23,8 +23,10 @@
                     <td>{{e[0]}}</td>
                     <td>{{e[1]}}</td>
                     <td>{{e[2]}}</td>
-                    <td>{{e[3]}}</td>
-                    <td>Editar- <a href="/destroy/{{e[0]}}">Borrar</a></td>
+                    <td>
+                        <img src="uploads/{{e[3]}}" alt="" class="img-thumbnail" width="100">
+                    </td>
+                    <td><a href="/edit/{{e[0]}}">Editar</a>- <a href="/destroy/{{e[0]}}">Borrar</a></td>
                 </tr>
             {% endfor %}
         </tbody>
